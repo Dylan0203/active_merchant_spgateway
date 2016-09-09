@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["RJ"]
   spec.email         = ["jeffrey410469@gmail.com"]
 
-  spec.summary       = %q{Unofficial SpGateway(智付通) gateway gem base on active_merchant}
+  spec.summary       = %q{Unofficial Spgateway(智付通) gem base on active_merchant and inspired by https://github.com/imgarylai/active_merchant_pay2go}
   spec.description   = %q{This is an unofficial SpGateway(智付通) gateway gem base on active_merchant, including helper form helper methods and gateway}
-  # spec.homepage      = "Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/BackerFounder/active_merchant_spgateway"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -27,7 +27,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency('activemerchant', '~> 1.60.0')
+  spec.add_dependency 'activemerchant'
+  spec.add_dependency 'offsite_payments'
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "pry", "~> 0.10.4"

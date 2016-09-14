@@ -37,7 +37,7 @@ module OffsitePayments #:nodoc:
             [field, @params[field]]
           }
 
-          hash_raw_data = "HashIV=#{OffsitePayments::Integrations::Spgateway.hash_iv}&#{raw_data}&HashKey=#{OffsitePayments::Integrations::Spgatewayz.hash_key}"
+          hash_raw_data = "HashIV=#{OffsitePayments::Integrations::Spgateway.hash_iv}&#{raw_data}&HashKey=#{OffsitePayments::Integrations::Spgateway.hash_key}"
           Digest::SHA256.hexdigest(hash_raw_data).upcase == check_code
         end
       end

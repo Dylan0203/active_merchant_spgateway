@@ -36,7 +36,6 @@ module OffsitePayments #:nodoc:
           raw_data = URI.encode_www_form OffsitePayments::Integrations::Spgateway::CHECK_CODE_FIELDS.sort.map { |field|
             [field, @params[field]]
           }
-
           hash_raw_data = "HashIV=#{OffsitePayments::Integrations::Spgateway.hash_iv}&#{raw_data}&HashKey=#{OffsitePayments::Integrations::Spgateway.hash_key}"
           Digest::SHA256.hexdigest(hash_raw_data).upcase == check_code
         end

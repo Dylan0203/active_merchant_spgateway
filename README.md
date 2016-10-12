@@ -12,7 +12,7 @@ And then execute:
 
 ## Usage
 
-僅適用於智付寶 1.2 版 API
+僅適用於智付通 1.2 版 API
 
 ## License
 

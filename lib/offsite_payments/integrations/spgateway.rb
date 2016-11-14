@@ -13,7 +13,7 @@ module OffsitePayments #:nodoc:
       CHECK_CODE_FIELDS = %w(Amt MerchantID MerchantOrderNo TradeNo)
 
       CONFIG = %w(
-        MerchantID LangType TradeLimit ExpireDate NotifyURL EmailModify LoginType
+        MerchantID LangType TradeLimit ExpireDate NotifyURL EmailModify LoginType ReturnURL CustomerURL
       )
 
       mattr_accessor :service_url
